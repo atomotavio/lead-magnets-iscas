@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>teste - Vlaga Labs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #0f172a;
+      background: radial-gradient(1200px 600px at 10% -10%, #f0fdf4 0%, transparent 40%),
+                  radial-gradient(1000px 500px at 90% 0%, #f8fafc 0%, transparent 40%),
+                  #ffffff;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      margin-bottom: 40px;
+      line-height: 1.1;
+      color: #020617;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 80px 0 32px;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #334155;
+      text-align: justify;
+      margin-bottom: 24px;
+    }
+
+    strong {
+      color: #059669;
+      font-weight: 700;
+    }
+
+    /* Video Section */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.18);
+      background: #000;
+      margin-bottom: 32px;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 48px;
+      border-radius: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #ffffff;
+      box-shadow: 0 20px 40px rgba(16,185,129,0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 30px 60px rgba(16,185,129,0.4);
+    }
+
+    .hero-cta {
+      margin-bottom: 80px;
+      text-align: center;
+    }
+
+    /* Content Flow */
+    .content-flow {
+      margin-top: 60px;
+    }
+
+    .list {
+      margin: 40px 0;
+      list-style: none;
+    }
+
+    .list li {
+      padding: 16px 0 16px 40px;
+      position: relative;
+      font-size: 1.1rem;
+      border-bottom: 1px solid #f1f5f9;
+      text-align: justify;
+    }
+
+    .list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #10b981;
+      font-weight: 800;
+    }
+
+    /* Dark CTA Band */
+    .cta-band {
+      margin: 100px 0;
+      padding: 80px 60px;
+      border-radius: 32px;
+      background: #0f172a;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-band::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(16,185,129,0.15) 0%, transparent 70%);
+    }
+
+    .cta-band h3 { color: #fff; font-size: 2rem; margin-bottom: 24px; }
+    .cta-band p { color: #94a3b8; text-align: left; margin-bottom: 40px; }
+
+    /* Clube do Token - Clean Flow */
+    .clube-token-flow {
+      margin: 100px 0;
+    }
+
+    .clube-token-flow h2 {
+      margin-top: 0;
+    }
+
+    /* About Section */
+    .about {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 48px;
+      align-items: center;
+      margin: 120px 0;
+      padding-top: 80px;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .about img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      filter: grayscale(10%) contrast(110%);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    /* Download Box - High Attention */
+    .download-box {
+      margin: 100px 0;
+      padding: 60px;
+      border-radius: 32px;
+      background: #ffffff;
+      border: 2px solid #10b981;
+      text-align: center;
+      box-shadow: 0 40px 80px rgba(16,185,129,0.12);
+      position: relative;
+    }
+
+    .download-box::after {
+      content: 'MATERIAL GRATUITO';
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #10b981;
+      color: white;
+      padding: 4px 16px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+
+    .download-box h3 { font-size: 1.8rem; color: #0f172a; }
+    .download-box p { text-align: center; color: #64748b; margin-bottom: 32px; }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      color: #cbd5e1;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.5rem; }
+      .container { padding: 40px 20px; }
+      .cta-band, .download-box { padding: 40px 24px; }
+      .about { grid-template-columns: 1fr; text-align: center; gap: 24px; }
+      .about img { margin: 0 auto; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <section class="hero">
+      <h1>teste</h1>
+
+      <div class="video-wrapper">
+        <iframe src="teste" allowfullscreen></iframe>
+      </div>
+
+      <div class="hero-cta">
+        <a href="{{LINK_AGENDA}}" class="btn btn-primary">Agendar diagnóstico operacional</a>
+      </div>
+    </section>
+
+    <section class="content-flow">
+      <p>Você acabou de ver como a automação certa resolve um problema pontual. O material técnico que você solicitou está disponível ao final desta página.</p>
+
+      <p><strong>Mas vamos ser sinceros: ter o blueprint não é o mesmo que ter uma operação lucrativa.</strong></p>
+
+      <p>Se a sua agência fatura mais de R$ 50k/mês e você ainda sente que o crescimento está sendo freado pelo caos operacional, o seu problema não é falta de "tutoriais". É falta de um <strong>sistema de escala</strong>.</p>
+
+      <h2>Como a Vlaga Labs estrutura sua operação</h2>
+      <p>Nós não entregamos apenas ferramentas; nós implementamos eficiência operacional. O foco da Vlaga Labs é transformar o gargalo da sua agência em uma operação previsível e escalável através de IA e fluxos de trabalho inteligentes:</p>
+
+      <ul class="list">
+        <li><strong>Onboarding Estruturado:</strong> Padronizamos a entrada de novos clientes, reduzindo o tempo de ativação de dias para minutos.</li>
+        <li><strong>Qualificação Inteligente de Leads:</strong> Agentes de IA que filtram oportunidades em tempo real para o seu time comercial.</li>
+        <li><strong>Gestão Financeira e Administrativa:</strong> Automatizamos fluxos de cobrança e notificações, eliminando falhas humanas.</li>
+        <li><strong>Dashboards de Performance:</strong> Visibilidade real sobre a produtividade e o ROI de cada processo da sua agência.</li>
+      </ul>
+
+      <p>Para garantir a qualidade da nossa entrega, focamos em agências com faturamento recorrente superior a <strong>R$ 50.000,00/mês</strong> e que já possuem equipe estruturada.</p>
+    </section>
+
+    <section class="cta-band">
+      <h3>Agende um Diagnóstico Estratégico</h3>
+      <p>Se você busca previsibilidade e quer eliminar os gargalos que impedem sua agência de chegar ao próximo nível, selecione um horário abaixo para uma breve reunião de diagnóstico.</p>
+      <a href="{{LINK_AGENDA}}" class="btn btn-primary">AGENDAR DIAGNÓSTICO OPERACIONAL</a>
+    </section>
+
+    <section class="clube-token-flow">
+      <h2>Ainda não chegou nos R$ 50k de faturamento?</h2>
+      <p>Se você ainda está estruturando sua agência ou quer aprender a construir suas próprias automações, o seu lugar é no <strong>Clube do Token</strong>.</p>
+      <p>Nossa comunidade no Discord reúne donos de agência e entusiastas de IA para troca de processos, networking e bastidores de implementação.</p>
+      <a href="{{LINK_DISCORD}}" class="btn btn-primary">ENTRAR PARA O CLUBE DO TOKEN</a>
+    </section>
+
+    <section class="about">
+      <img src="https://cdn.abacus.ai/images/abbf500a-ad8c-4d84-a2d5-4bdf3e37cc6f.png" alt="Otávio - Vlaga Labs" />
+      <div>
+        <p><strong>Otávio</strong> é o fundador da Vlaga Labs e especialista em automação aplicada a processos operacionais de agências de marketing.</p>
+        <p>A missão da Vlaga Labs é clara: tirar donos de agência do caos operacional e devolver o tempo estratégico que eles precisam para crescer.</p>
+      </div>
+    </section>
+
+    <section class="download-box">
+      <h3>Blueprint e Materiais</h3>
+      <p>Como prometido, aqui está o acesso ao material técnico e o blueprint do tutorial apresentado no vídeo.</p>
+      <a href="teste" class="btn btn-primary">BAIXAR MATERIAL COMPLETO</a>
+    </section>
+
+    <footer>
+      © 2026 Vlaga Labs. Todos os direitos reservados.
+    </footer>
+  </div>
+</body>
+</html>
