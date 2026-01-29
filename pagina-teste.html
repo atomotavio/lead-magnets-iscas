@@ -253,13 +253,13 @@
       <p><strong>Mas vamos ser sinceros: solução pontual não é o mesmo que ter uma operação lucrativa.</strong></p>
 
       <div class="hero-cta">
-        <a href="#" 
+      </center><a href="#" 
    class="btn btn-primary"
-   data-cal-link="otaviovlaga/30min"
-   data-cal-namespace="30min"
+   data-cal-link="joaofreire/vlagalabs"
+   data-cal-namespace="vlagalabs"
    data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
    AGENDAR DIAGNÓSTICO GRATUITO
-</a>
+</a></center>
       </div>
 
       <p>Se a sua empresa fatura mais de R$ 50k/mês e você ainda sente que o crescimento está sendo freado pelo caos operacional, o seu problema não é falta de "tutoriais". É falta de um <strong>sistema capaz de escalar</strong>.</p>
@@ -283,8 +283,8 @@
       
       <a href="#" 
    class="btn btn-primary"
-   data-cal-link="otaviovlaga/30min"
-   data-cal-namespace="30min"
+   data-cal-link="joaofreire/vlagalabs"
+   data-cal-namespace="vlagalabs"
    data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
    AGENDAR DIAGNÓSTICO GRATUITO
 </a>
@@ -318,10 +318,12 @@
 
   <!-- Cal element-click embed code begins -->
 <script type="text/javascript">
-  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", "30min", {origin:"https://app.cal.com"});
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal  function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q 
+ []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q  []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] 
+ api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "vlagalabs", {origin:"https://app.cal.com"}/);
 
-  Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+  Cal.ns.vlagalabs("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
   </script>
   <!-- Cal element-click embed code ends -->
 </body>
